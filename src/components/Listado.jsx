@@ -18,6 +18,8 @@ const Listado = ({colaboradores, BaseColaboradores}) => {
                     <th>Edad</th>
                     <th>Cargo</th>
                     <th>Teléfono</th>
+                    <th>Acción</th>
+
                 </tr>
             </thead>
             <tbody>
@@ -28,6 +30,14 @@ const Listado = ({colaboradores, BaseColaboradores}) => {
                     <td>{colaborador.edad}</td>
                     <td>{colaborador.cargo}</td>
                     <td>{colaborador.telefono}</td>
+                    <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => onEliminarColaborador(colaborador.id)}
+                  >
+                    Eliminar
+                  </button>
+                </td>
                 </tr>
                 ))}
 
@@ -38,6 +48,14 @@ const Listado = ({colaboradores, BaseColaboradores}) => {
                     <td>{colaborador.edad}</td>
                     <td>{colaborador.cargo}</td>
                     <td>{colaborador.telefono}</td>
+                    <td>
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => onEliminarColaborador(colaborador.id)}
+                  >
+                    Eliminar
+                  </button>
+                </td>
                 </tr>
                 ))}
             </tbody>
